@@ -67,5 +67,5 @@ class Solution:
 
 
 Complexity Analysis:
-- Code 1 - Rotate k times: O(n^2) in time, O(1) in space
+- Code 1 - Rotate k times: O(n * k) in time, O(1) in space
 - Code 2 - Using Reverse: O(n) in time, O(1) in space
