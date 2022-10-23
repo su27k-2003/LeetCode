@@ -22,7 +22,7 @@ rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 ```
 
-Code 1 - Rotate k times:
+Solution 1 - Rotate k times:
 
 ```python
 class Solution:
@@ -35,8 +35,9 @@ class Solution:
         return nums
 
 ```
+Complexity: O(n * k) in time, O(1) in space
 
-Code 2 - Using Reverse
+Solution 2 - Using Reverse
 ```python
 class Solution:
     def rotate(self, nums, k) -> None:
@@ -65,7 +66,4 @@ class Solution:
             end -= 1
 ```
 
-
-Complexity Analysis:
-- Code 1 - Rotate k times: O(n * k) in time, O(1) in space
-- Code 2 - Using Reverse: O(n) in time, O(1) in space
+Complexity: O(n) in time, O(1) in space
