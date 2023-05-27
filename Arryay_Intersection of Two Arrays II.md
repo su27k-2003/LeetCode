@@ -40,8 +40,8 @@ class Solution:
 ```
 Time Complexity = O(n), space comlexity = O(n)
 
-Solution 2:
-With sorted array, use two pointiers
+Follow up question:
+With sorted array, unnecessary to use hash, could use two pointiers:
 ```
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
