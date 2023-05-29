@@ -31,3 +31,27 @@ Only one valid answer exists.
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
+Solution 1 - brute force: 
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for l in range(len(nums)):
+            for r in range(l+1, len(nums)):
+                if nums[l] + nums[r] == target:
+                    return [l, r]
+```
+Time complexity = O(n^2), Space complexity = O(1)
+
+Solution 2 - Hashmap:
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashmap = {}
+        
+        for i in range(len(nums)):
+            if target - nums[i] not in hashmap:
+                hashmap[nums[i]] = i
+            else:
+                return [hashmap[target-nums[i]], i]
+```
+Time complexity = O(n), Space complexity = O(1)
