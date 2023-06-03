@@ -23,3 +23,49 @@ Constraints:
 n == matrix.length == matrix[i].length
 1 <= n <= 20
 -1000 <= matrix[i][j] <= 1000
+
+Solution 1:
+```
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        x = 0
+        for i in zip(*matrix):
+            matrix.pop(x)
+            i = i[::-1]
+            matrix.insert(x, i)
+            x +=1
+```
+
+Solution 2:
+```
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        l, r = 0, len(matrix)-1
+        
+        while l < r:
+            for i in range(r-l):
+                #top, bottom
+                t, b = l, r
+                
+                top_left = matrix[t][l+i] 
+                
+                #move bottom_left to top_left
+                matrix[t][l+i] = matrix[b-i][l]
+                
+                #move bottom_rgith to bottom_left
+                matrix[b-i][l] = matrix[b][r-i]
+                
+                #move top_right to bottom_rgith
+                matrix[b][r-i] = matrix[t+i][r]
+                
+                #move top_left to top_rgith
+                matrix[t+i][r] = top_left
+            l += 1
+            r -= 1
+```
