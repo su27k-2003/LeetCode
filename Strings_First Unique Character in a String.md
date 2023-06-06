@@ -38,7 +38,7 @@ Solution 2 - Build Hashmap:
 ```
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        lookup = dict()
+        lookup = {}
         
         for i in s:
             if i in lookup:
