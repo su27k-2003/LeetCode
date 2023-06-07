@@ -55,7 +55,7 @@ class Solution:
 ```
 Time: O(s+t), space: O(s+t)
 
-Solution 3: How to use less space
+Solution 3: How to use less space or if the string contain Unicode characters?
 ```
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
