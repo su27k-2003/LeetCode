@@ -33,7 +33,7 @@ Constraints:
 0 <= digits[i] <= 9
 digits does not contain any leading 0's.
 
-Solution:
+Solution 1:
 ```
 class Solution(object):
     def plusOne(self, digits):
@@ -41,6 +41,24 @@ class Solution(object):
         :type digits: List[int]
         :rtype: List[int]
         """
-        plusone= int(''.join(map(str,digits))) + 1  // convert list[1,2,3] -> int 123 +1 = 124
-        return list(map(int,str(plusone)))  // convert int 124 -> list [1,2,4]
+        plusone= int(''.join(map(str, digits))) + 1  // convert list[1,2,3] -> int 123 +1 = 124
+        return list(map(int, str(plusone)))  // convert int 124 -> list [1,2,4]
+```
+
+Solution 2:
+```
+class Solution(object):
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        for i in reversed(range(len(digits))):
+         if digits[i] == 9:
+          digits[i] = 0
+         else:
+          digits[i] += 1
+          return digits
+        digits[0] = 1
+        digits.append[0]
 ```
