@@ -35,7 +35,7 @@ class Solution:
                 nums.append(i)
         return nums
 ```
-Time Complexity = O(n^2), Speace Complexity = O(n)
+Time Complexity = O(n^2), Speace Complexity = O(1)
 
 Solution 2: Two pointers
 ```
@@ -51,4 +51,4 @@ class Solution:
                 l += 1
         return nums 
 ```
-Time Complexity = O(n), Speace Complexity = O(n)
+Time Complexity = O(n), Speace Complexity = O(1)
